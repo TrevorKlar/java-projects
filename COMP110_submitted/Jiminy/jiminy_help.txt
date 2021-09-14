@@ -1,0 +1,10 @@
+Usage: java Jiminy [OPTION]...
+Does a few helpful things around the terminal.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -d, --date      Prints the date to System.out
+  -t, --time      Prints the time to System.out
+      --proc      Prints the available processors to System.out
+  -m  --freemem   Prints the amount of free memory to System.out
+      --maxmem    Prints the amount of maximum memory to System.out
+  -M  --totmem    Prints the amount of total memory to System.out

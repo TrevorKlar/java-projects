@@ -1,0 +1,147 @@
+//Name: Trevor Klar
+//Date: 12-1-18
+//Application: GUI
+//Purpose: Making a GUI.
+
+// abstract window toolkit (awt)
+import java.awt.BorderLayout;
+import java.awt.Cursor;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+// awt events
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+// swing
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.JSplitPane;
+import javax.swing.JScrollPane;
+import javax.swing.JDesktopPane;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.BorderFactory;
+import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import javax.swing.ImageIcon;
+import javax.swing.JTree;
+import javax.swing.JInternalFrame;
+import javax.swing.SwingUtilities;
+// swing event
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
+// swing tree
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.TreePath;
+
+public class GUIApp {
+
+    private JFrame frame;
+    private JPanel panel;
+    private JScrollPane scrollPane;
+    private JDesktopPane desktop;
+    private JSplitPane splitPane;
+    private JPanel labelPanel;
+    private JLabel statusLabel;
+    private JMenuBar menuBar;
+    private JMenu fileMenu;
+    private JMenu helpMenu;
+    private JMenuItem exitItem;
+    private JMenuItem aboutItem;
+
+    // constructor
+    public GUIApp() {
+        initComponents();
+        statusLabel.setText("Initialization complete.");
+    }
+
+    public void exitActionPerformed() {
+        frame.dispose();
+    }
+
+    public void aboutActionPerformed() {
+        JOptionPane.showMessageDialog(null, "Thanks for using my app!");
+    }
+
+    // create a GUI and make it visible to user
+    private void initComponents() {
+        try {
+            UIManager.setLookAndFeel(
+                UIManager.getSystemLookAndFeelClassName()
+            );
+        }
+        catch (Exception e) { e.printStackTrace(); }
+
+        // create a new frame and give it a title
+        JFrame frame = new JFrame("My First GUI Application");
+        frame.setDefaultLookAndFeelDecorated(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(new BorderLayout());
+        desktop = new JDesktopPane();
+        scrollPane = new JScrollPane();
+        statusLabel = new JLabel();
+        panel = new JPanel();
+        labelPanel = new JPanel();
+        // set border, size and layout
+        labelPanel.setLayout(new BorderLayout());
+        statusLabel.setBorder(BorderFactory.createLoweredBevelBorder());
+        statusLabel.setMinimumSize(new Dimension(0,18));
+        statusLabel.setPreferredSize(new Dimension(0,18));
+        // add a label to the GUI
+        JLabel label = new JLabel("Hey this is my first GUI app!");
+        frame.getContentPane().add(label);
+        // build menu
+        JMenuBar menuBar = new JMenuBar();
+        JMenu fileMenu = new JMenu("File");
+        JMenu helpMenu = new JMenu("Help");
+        JMenuItem exitItem = new JMenuItem("Exit");
+        JMenuItem aboutItem = new JMenuItem("About");
+        fileMenu.add(exitItem);
+        helpMenu.add(aboutItem);
+        menuBar.add(fileMenu);
+        menuBar.add(helpMenu);
+        // add listener to exit menu item
+        exitItem.addActionListener(
+          new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+              exitActionPerformed();
+            }
+          }
+        );
+        // add listener to about menu item
+        aboutItem.addActionListener(
+          new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+              aboutActionPerformed();
+            }
+          }
+        );
+        // setup the panel
+        panel.setLayout(new BorderLayout());
+        splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
+        splitPane.setOneTouchExpandable(true);
+        splitPane.setDividerLocation(200);
+        splitPane.setContinuousLayout(true);
+        splitPane.add(desktop, JSplitPane.RIGHT);
+        splitPane.add(scrollPane, JSplitPane.LEFT);
+        panel.add(splitPane, BorderLayout.CENTER);
+        labelPanel.add(statusLabel, BorderLayout.CENTER);
+        // setup and show frame
+        frame.getContentPane().add(labelPanel, BorderLayout.SOUTH);
+        frame.getContentPane().add(panel, BorderLayout.CENTER);
+        // show GUI
+        frame.setSize(1280,800);
+        frame.setJMenuBar(menuBar);
+        frame.setVisible(true);
+    } // end of initComponents
+} // end of MyFirstGUIApp
+
+//lecture 21, slide 34

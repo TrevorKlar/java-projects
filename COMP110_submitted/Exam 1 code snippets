@@ -1,0 +1,82 @@
+=====54=====
+
+import javax.swing.JOptionPane;
+import java.util.Scanner;
+
+class Bool {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    JOptionPane.showMessageDialog(null, "Enter True or False"); 
+    String userInput = sc.nextLine();
+    if (userInput.equals("True")) {
+      JOptionPane.showMessageDialog(null, "One small step for man..."); 
+    } else if(userInput.equals("False")) {
+      JOptionPane.showMessageDialog(null, "You can’t handle the truth!"); 
+    } else {
+      JOptionPane.showMessageDialog(null, "I said, enter \"True\" or \"False\", dummy. Now run this code again. I'm not writing a loop to account for your lack of reading skills.");  
+    }
+  }
+}
+
+=====65=====
+
+isPalindrome(String userInput) {
+  Int len = userInput.length();
+  for (i=0; i<len; i++) {
+    if !(userInput[i].equals(userInput[len-i])) {
+      return False;
+    } // end if
+  } // end for
+  return True;
+} // end isPalindrome
+
+isPalindrome("madamimadam"); // returns True
+isPalindrome("dodgers are gonna win the world series"); // returns False
+
+=====66=====
+
+class NewportBeach {
+  private int numOfTimes;
+  private String vacaSpot;
+  private boolean flag;
+
+  NewportBeach() {
+    numOfTimes = 0;
+    vacaSpot = "";
+    flag = False;
+  }
+
+  NewportBeach(int numOfTimes, String vacaSpot, boolean flag) {
+    this.c = numOfTimes;
+    this.vacaSpot = vacaSpot;
+    this.flag = flag;
+  }
+
+  public void printVacaSpot() {
+    System.out.println("You have been to " + (flag ? "an undisclosed location" : vacaSpot) + " " + numOfTimes + " times.");
+  }
+
+  public void toggleVacaSpot() {
+    flag != flag;
+  }
+
+  public static void welcome() {
+    System.out.println("Welcome to my Java app!");
+  }
+}
+
+
+
+class Driver {
+  public static void main(String[] args) {
+    NewportBeach theBeachHouse = new NewportBeach(34, "413 E Edgewater, Newport Beach, CA", True);
+    NewportBeach.welcome();
+    theBeachHouse.printVacaSpot();
+    theBeachHouse.toggleVacaSpot();
+    theBeachHouse.printVacaSpot();
+  }
+}
+
+
+
+

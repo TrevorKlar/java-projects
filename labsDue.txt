@@ -1,0 +1,54 @@
+Labs due 12/8:
+- Singleton
+- FacebookLite 3
+- Gui 1 
+- Gui 2
+  You should now have a working baseline of a Java GUI application
+  Your goal is to add the following Dialog boxes
+  Weight on the Moon
+  Miles to Meters
+  Miles to Kilometers
+  Random phone number generator (based on area code)
+  Password generator (alpha-numeric + special chars, at least 8 chars, no space)
+  Dec to Hex
+  Dec to Binary
+
+
+lecture 20
+  https://docs.google.com/presentation/d/13aPFBPOrkFmTR2etG0-BVBYjP4G4kN6Xl2HEY9EjsG0/edit?usp=sharing 
+lecture 21
+  https://docs.google.com/presentation/d/13conC7EwVdX_oGUOQhBXG1sFxF9wz-Mfu-PaC3w2W7Q/edit?usp=sharing 
+lecture 22
+  https://docs.google.com/presentation/d/15uCqPiqs3cjqV__RX-XGnYh6pJbDfD3dkiX0bIUW1OM/edit?usp=sharing 
+
+
+Labs due 11/24:
+- Recursion
+- Threads
+- QueueAndStack
+- ShuttleLaunch
+- FacebookLite (Milestone 2)
+    - Don't forget to disallow nonsense data as well as app-crashing stuff. 
+
+lecture 18
+  https://docs.google.com/presentation/d/15KeYwLde7xKwLmDuSGyTUXyVRvfH5_aIIMcbS0HMn_4/edit#slide=id.gf149429b4_0_240
+lecture 19
+  https://docs.google.com/presentation/d/1Lng2-83UIuG80NBZX8sxbPC6-oAH17Aaha8cF2Rrdxc/edit#slide=id.g1284fa58c3_0_32
+
+
+Labs due 11/17:
+
+- FaceBookLite milestone 1
+- Algo
+  - make the methods member methods, so an instance of algo must be created
+- CheckersBoard
+- IO
+
+lecture 14
+  https://docs.google.com/presentation/d/1WFbew-Gg1WSe1TkpgQ-XoKfe91NEktUeckrRzkJgpJA/edit#slide=id.gf149429b4_0_240
+lecture 15
+  https://docs.google.com/presentation/d/1NKpY4xf_ynwdqHgt4SGenhxlAnhT-yIhUCml1eV2fbk/edit#slide=id.gf149429b4_0_240
+lecture 16
+  https://docs.google.com/presentation/d/1kL29cSSFObiYjAuy2FTDjrJ61YFQ1hA790sgu9C2vDY/edit#slide=id.gf13ac6bd5_0_0
+lecture 17
+  https://docs.google.com/presentation/d/1yJwZMhHr3GUUtOlNKVvse4kPi3asbmV_ojaPgsWozww/edit#slide=id.g299abe34bf_4_10
